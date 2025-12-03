@@ -1,0 +1,348 @@
+:root {
+    --primary-color: #042379; /* الأزرق الداكن / الكحلي */
+    --accent-color: #DE363C;  /* الأحمر الساطع / القرمزي */
+    --text-color: #333333;
+    --light-bg: #f9f9f9;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* ------------------------------------- */
+/* التنسيقات العامة */
+/* ------------------------------------- */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 40px 0;
+}
+
+h2, h3, h4 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.page-header {
+    background-color: var(--light-bg);
+    color: var(--primary-color);
+    padding: 50px 0;
+    text-align: center;
+}
+
+.page-header h2 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* ------------------------------------- */
+/* الشريط العلوي (Navbar) */
+/* ------------------------------------- */
+.navbar {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    direction: rtl; 
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-right: 25px;
+    font-weight: 500;
+}
+
+.cta-button {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #a8292e;
+}
+
+/* ------------------------------------- */
+/* القائمة السفلية (Footer) */
+/* ------------------------------------- */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding-top: 50px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding-bottom: 40px;
+    text-align: right;
+}
+
+.footer-col h3 {
+    color: var(--accent-color);
+    text-align: right;
+    border-bottom: 2px solid #5a74c7;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-col a:hover {
+    color: var(--accent-color);
+}
+
+.contact-col p {
+    display: flex;
+    align-items: center;
+    font-size: 0.95em;
+}
+
+.contact-col i {
+    margin-left: 10px;
+    color: var(--accent-color);
+}
+
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    font-size: 1.5em;
+    margin-left: 10px;
+    color: white;
+}
+
+.copyright-bar {
+    background-color: #021a59;
+    padding: 15px 0;
+    font-size: 0.9em;
+    border-top: 1px solid #0631b3;
+}
+
+.copyright-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.copyright-bar p {
+    margin: 0;
+}
+
+.policy-links a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+/* ------------------------------------- */
+/* تنسيقات خاصة بالصفحات الداخلية */
+/* ------------------------------------- */
+
+/* Hero Section (Index) */
+.hero-section {
+    background-image: url('placeholder-school-image.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    background-color: rgba(4, 35, 121, 0.75);
+    padding: 40px 80px;
+    border-radius: 10px;
+}
+
+.hero-content h2 {
+    color: white;
+    font-size: 3.5em;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    color: #ffffff;
+    font-size: 1.6em;
+    margin-bottom: 40px;
+}
+
+/* Quick Facts (Index) */
+.quick-facts {
+    background-color: var(--light-bg);
+    padding: 50px 0;
+    text-align: center;
+}
+
+.fact-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.fact-item {
+    flex-basis: 22%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 10px;
+    transition: transform 0.3s;
+}
+
+.fact-item:hover {
+    transform: translateY(-5px);
+}
+
+.fact-item i {
+    color: var(--accent-color);
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+.vision-mission {
+    padding: 50px 0;
+}
+
+.vm-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.vm-card {
+    flex: 1;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.vm-vision {
+    background-color: var(--primary-color);
+    color: white;
+}
+.vm-mission {
+    background-color: var(--light-bg);
+    border: 1px solid var(--primary-color);
+}
+.vm-card h3 {
+    color: var(--accent-color);
+    font-size: 1.8em;
+    margin-top: 0;
+}
+.vm-vision h3 {
+    color: white;
+}
+
+/* Academics Stages & Admissions Steps */
+.stage-grid, .steps-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.stage-card, .step-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-top: 5px solid var(--primary-color);
+    transition: transform 0.3s;
+}
+
+.stage-card:hover, .step-card:hover {
+    transform: translateY(-5px);
+}
+
+.stage-card i {
+    font-size: 3em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+.stage-card h4 {
+    color: var(--accent-color);
+    margin-top: 10px;
+}
+
+/* Contact Page */
+.contact-grid {
+    display: flex;
+    gap: 40px;
+    padding: 30px 0;
+}
+.contact-info, .contact-form {
+    flex: 1;
+}
+.contact-form form {
+    background-color: var(--light-bg);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.map-section iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+/* Parent Portal */
+.portal-layout {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    padding: 50px 0;
+}
+.login-section {
+    flex-basis: 40%;
+    background-color: var(--light-bg);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    border-top: 5px solid var(--primary-color);
+}
+.security-alert {
+    background-color: #ffebee;
+    border-right: 5px solid var(--accent-color);
+    padding: 15px;
+    margin-top: 30px;
+    border-radius: 5px;
+    color: var(--text-color);
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BVIS | الأكاديميات والمناهج الدولية</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> 
+    <script>
+        function showCurriculum(curriculumId) {
+            var contents = document.getElementsByClassName('curriculum-content');
+            for (var i = 0; i < contents.length; i++) {
+                contents[i].style.display = 'none';
+            }
+            document.getElementById(curriculumId).style.display = 'block';
+
+            var buttons = document.getElementsByClassName('curriculum-button');
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove('active');
+            }
+            document.querySelector('.curricula-tabs button[onclick="showCurriculum(\'' + curriculumId + '\')"]').classList.add('active');
+        }
+    </script>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo"><h1>BVIS | Bright Vision International School</h1></div>
+        <nav class="nav-links">
+            <a href="index.html">الرئيسية</a>
+            <a href="about.html">عن المدرسة</a>
+            <a href="academics.html" style="font-weight: bold; border-bottom: 2px solid white;">الأكاديميات</a>
+            <a href="admissions.html">القبول والتسجيل</a>
+            <a href="campus.html">الحياة المدرسية</a>
+        </nav>
+        <div>
+            <a href="contact.html" class="cta-button">تواصل معنا</a>
+            <a href="portal.html" class="cta-button parent-portal">بوابة أولياء الأمور</a>
+        </div>
+    </header>
+
+    <main>
+        
+        <section class="page-header">
+            <div class="container">
+                <h2>📚 مساراتنا التعليمية: التميز الأكاديمي والرؤية العالمية</h2>
+                <p>تقدم BVIS منهجاً دولياً متوازناً وشاملاً لتطوير العقول المفكرة، من مرحلة رياض الأطفال حتى التخرج.</p>
+            </div>
+        </section>
+
+        <section class="curricula">
+            <div class="container">
+                <h2>اختر المسار الأكاديمي المناسب لطفلك</h2>
+                
+                <div class="curricula-tabs">
+                    <button class="curriculum-button active" onclick="showCurriculum('british')"><i class="fas fa-flag-gb"></i> المنهج البريطاني</button>
+                    <button class="curriculum-button" onclick="showCurriculum('american')"><i class="fas fa-flag-us"></i> المنهج الأمريكي</button>
+                </div>
+
+                <div id="british" class="curriculum-content">
+                    <h3>المسار البريطاني - الاعتماد على كامبريدج (Cambridge)</h3>
+                    <p>يعتمد المسار البريطاني على منهج صارم ومعترف به عالمياً، يهدف إلى إعداد الطلاب لاختبارات IGCSE و A-Levels التي تُعد مفتاح القبول لأفضل الجامعات الدولية.</p>
+                </div>
+
+                <div id="american" class="curriculum-content" style="display: none;">
+                    <h3>المسار الأمريكي - التركيز على المعايير الأساسية (Common Core)</h3>
+                    <p>يوفر المنهج الأمريكي برنامجاً تعليمياً مرناً وشاملاً يركز على التطبيق العملي والمهارات الحياتية، ويؤهل الطلاب لاختبارات SAT/ACT للالتحاق بالجامعات.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="educational-stages" style="background-color: var(--light-bg);">
+            <div class="container">
+                <h2>مراحلنا التعليمية (KG - Grade 12)</h2>
+                <div class="stage-grid">
+                    <div class="stage-card"><i class="fas fa-baby"></i><h4>1. رياض الأطفال (KG)</h4><p>تنمية المهارات الأساسية والاجتماعية من خلال اللعب والتعلم الاستكشافي.</p></div>
+                    <div class="stage-card"><i class="fas fa-school"></i><h4>2. المرحلة الابتدائية (Primary)</h4><p>تنمية القراءة والكتابة والحساب، وتشجيع حب الاستطلاع والتعلم النشط.</p></div>
+                    <div class="stage-card"><i class="fas fa-user-graduate"></i><h4>3. المرحلة الإعدادية (Middle)</h4><p>مرحلة اكتشاف التخصصات، وتعزيز التفكير النقدي، وبناء المسؤولية الذاتية.</p></div>
+                    <div class="stage-card"><i class="fas fa-chart-line"></i><h4>4. المرحلة الثانوية (High School)</h4><p>التحضير المكثف للجامعات الدولية واختبارات القبول (IGCSE, A-Levels, SAT).</p></div>
+                </div>
+                <div style="text-align: center;">
+                    <a href="contact.html" class="cta-button" style="padding: 12px 30px; font-size: 1.1em; margin-top: 20px;">احجز جلسة استشارية</a>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+    <footer></footer>
+
+</body>
+</html>
