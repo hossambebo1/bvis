@@ -11,17 +11,16 @@
 
     <header class="navbar">
         <div class="logo"><h1>BVIS | Bright Vision International School</h1></div>
-        <nav class="nav-links">
+        <div class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+        <nav class="nav-links" id="navbarNav">
             <a href="index.html" style="font-weight: bold; border-bottom: 2px solid white;">الرئيسية</a>
             <a href="about.html">عن المدرسة</a>
             <a href="academics.html">الأكاديميات</a>
             <a href="admissions.html">القبول والتسجيل</a>
             <a href="campus.html">الحياة المدرسية</a>
+            <a href="contact.html" class="cta-button" style="display: block;">تواصل معنا</a>
+            <a href="portal.html" class="cta-button parent-portal" style="display: block;">بوابة أولياء الأمور</a>
         </nav>
-        <div>
-            <a href="contact.html" class="cta-button">تواصل معنا</a>
-            <a href="portal.html" class="cta-button parent-portal">بوابة أولياء الأمور</a>
-        </div>
     </header>
 
     <section class="hero-section" id="home">
@@ -35,30 +34,13 @@
     </section>
 
     <main>
-        
         <section class="quick-facts">
             <div class="container">
                 <div class="fact-grid">
-                    <div class="fact-item">
-                        <i class="fas fa-graduation-cap"></i>
-                        <h3>منهج دولي متطور</h3>
-                        <p>نقدم المسارين البريطاني والأمريكي لضمان أفضل الفرص الجامعية.</p>
-                    </div>
-                    <div class="fact-item">
-                        <i class="fas fa-globe"></i>
-                        <h3>بيئة متعددة اللغات</h3>
-                        <p>تعزيز اللغة الإنجليزية والعربية واللغات الإضافية لتكوين مواطن عالمي.</p>
-                    </div>
-                    <div class="fact-item">
-                        <i class="fas fa-microscope"></i>
-                        <h3>مرافق عالمية</h3>
-                        <p>مختبرات حديثة، ملاعب واسعة، ومركز ابتكار تقني.</p>
-                    </div>
-                    <div class="fact-item">
-                        <i class="fas fa-users"></i>
-                        <h3>رعاية شخصية</h3>
-                        <p>دعم إرشادي ونفسي مكثف لنمو الطالب الشامل.</p>
-                    </div>
+                    <div class="fact-item"><i class="fas fa-graduation-cap"></i><h3>منهج دولي متطور</h3><p>نقدم المسارين البريطاني والأمريكي لضمان أفضل الفرص الجامعية.</p></div>
+                    <div class="fact-item"><i class="fas fa-globe"></i><h3>بيئة متعددة اللغات</h3><p>تعزيز اللغة الإنجليزية والعربية واللغات الإضافية لتكوين مواطن عالمي.</p></div>
+                    <div class="fact-item"><i class="fas fa-microscope"></i><h3>مرافق عالمية</h3><p>مختبرات حديثة، ملاعب واسعة، ومركز ابتكار تقني.</p></div>
+                    <div class="fact-item"><i class="fas fa-users"></i><h3>رعاية شخصية</h3><p>دعم إرشادي ونفسي مكثف لنمو الطالب الشامل.</p></div>
                 </div>
             </div>
         </section>
@@ -83,13 +65,15 @@
                 </div>
             </div>
         </section>
-        
     </main>
 
-    <footer>
-        <div class="container footer-grid"></div>
-        <div class="copyright-bar"></div>
-    </footer>
+    <footer></footer>
     
+    <script>
+        function toggleMenu() {
+            var navLinks = document.getElementById('navbarNav');
+            navLinks.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
