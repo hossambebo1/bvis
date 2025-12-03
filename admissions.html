@@ -11,21 +11,19 @@
 
     <header class="navbar">
         <div class="logo"><h1>BVIS | Bright Vision International School</h1></div>
-        <nav class="nav-links">
+        <div class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+        <nav class="nav-links" id="navbarNav">
             <a href="index.html">الرئيسية</a>
             <a href="about.html">عن المدرسة</a>
             <a href="academics.html">الأكاديميات</a>
             <a href="admissions.html" style="font-weight: bold; border-bottom: 2px solid white;">القبول والتسجيل</a>
             <a href="campus.html">الحياة المدرسية</a>
+            <a href="contact.html" class="cta-button" style="display: block;">تواصل معنا</a>
+            <a href="portal.html" class="cta-button parent-portal" style="display: block;">بوابة أولياء الأمور</a>
         </nav>
-        <div>
-            <a href="contact.html" class="cta-button">تواصل معنا</a>
-            <a href="portal.html" class="cta-button parent-portal">بوابة أولياء الأمور</a>
-        </div>
     </header>
 
     <main>
-        
         <section class="page-header">
             <div class="container">
                 <h2>✅ انضم إلى عائلة BVIS: رحلة طفلك نحو المستقبل تبدأ هنا!</h2>
@@ -36,30 +34,12 @@
         <section class="admission-steps">
             <div class="container">
                 <h2>الخطوات الأربع الأساسية للقبول</h2>
-                
                 <div class="steps-container">
                     
-                    <div class="step-card">
-                        <span class="step-number">1</span><h3>الاستفسار والتقديم الأولي</h3>
-                        <p>املأ نموذج الاستفسار عبر الإنترنت وتحديد المرحلة الدراسية المطلوبة.</p>
-                        <a href="#application-form" class="cta-button" style="margin-top: 15px;">املأ نموذج الاستفسار</a>
-                    </div>
-
-                    <div class="step-card">
-                        <span class="step-number">2</span><h3>تقديم المستندات المطلوبة</h3>
-                        <p>إرسال الوثائق الأساسية (الشهادات، الهوية، وصور جوازات السفر) إلى مكتب القبول.</p>
-                    </div>
-
-                    <div class="step-card">
-                        <span class="step-number">3</span><h3>التقييم والمقابلة الشخصية</h3>
-                        <p>إجراء اختبار تقييم أكاديمي (Assessment Test) ومقابلة مع الطالب وولي الأمر.</p>
-                    </div>
-
-                    <div class="step-card">
-                        <span class="step-number">4</span><h3>قرار القبول وتأكيد التسجيل</h3>
-                        <p>بعد النجاح في التقييم، يتم دفع الرسوم المقررة لتأكيد حجز مقعد الطالب رسمياً.</p>
-                        <a href="#fees" class="cta-button" style="margin-top: 15px;">اطلع على الرسوم</a>
-                    </div>
+                    <div class="step-card"><span class="step-number">1</span><h3>الاستفسار والتقديم الأولي</h3><p>املأ نموذج الاستفسار عبر الإنترنت وتحديد المرحلة الدراسية المطلوبة.</p><a href="#application-form" class="cta-button" style="margin-top: 15px;">املأ نموذج الاستفسار</a></div>
+                    <div class="step-card"><span class="step-number">2</span><h3>تقديم المستندات المطلوبة</h3><p>إرسال الوثائق الأساسية (الشهادات، الهوية، وصور جوازات السفر) إلى مكتب القبول.</p></div>
+                    <div class="step-card"><span class="step-number">3</span><h3>التقييم والمقابلة الشخصية</h3><p>إجراء اختبار تقييم أكاديمي (Assessment Test) ومقابلة مع الطالب وولي الأمر.</p></div>
+                    <div class="step-card"><span class="step-number">4</span><h3>قرار القبول وتأكيد التسجيل</h3><p>بعد النجاح في التقييم، يتم دفع الرسوم المقررة لتأكيد حجز مقعد الطالب رسمياً.</p><a href="#fees" class="cta-button" style="margin-top: 15px;">اطلع على الرسوم</a></div>
 
                 </div>
             </div>
@@ -69,10 +49,7 @@
             <div class="container">
                 <div class="required-docs">
                     <h3 style="text-align: right; color: var(--primary-color);">المستندات الأساسية اللازمة للتقديم</h3>
-                    <ul>
-                        <li>شهادة ميلاد الطالب الأصلية وصورة من جواز السفر أو الهوية.</li>
-                        <li>النتائج المدرسية (الشهادات) للعامين الدراسيين الأخيرين.</li>
-                    </ul>
+                    <ul><li>شهادة ميلاد الطالب الأصلية وصورة من جواز السفر أو الهوية.</li><li>النتائج المدرسية (الشهادات) للعامين الدراسيين الأخيرين.</li></ul>
                 </div>
                 
                 <div class="required-docs" id="fees" style="margin-top: 40px;">
@@ -82,13 +59,16 @@
                          <a href="contact.html" class="cta-button" style="padding: 12px 30px; font-size: 1.1em; margin-top: 20px;">طلب هيكل الرسوم الدراسية</a>
                     </div>
                 </div>
-
             </div>
         </section>
-
     </main>
     
     <footer></footer>
-
+    <script>
+        function toggleMenu() {
+            var navLinks = document.getElementById('navbarNav');
+            navLinks.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
