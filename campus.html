@@ -11,21 +11,19 @@
 
     <header class="navbar">
         <div class="logo"><h1>BVIS | Bright Vision International School</h1></div>
-        <nav class="nav-links">
+        <div class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+        <nav class="nav-links" id="navbarNav">
             <a href="index.html">الرئيسية</a>
             <a href="about.html">عن المدرسة</a>
             <a href="academics.html">الأكاديميات</a>
             <a href="admissions.html">القبول والتسجيل</a>
             <a href="campus.html" style="font-weight: bold; border-bottom: 2px solid white;">الحياة المدرسية</a>
+            <a href="contact.html" class="cta-button" style="display: block;">تواصل معنا</a>
+            <a href="portal.html" class="cta-button parent-portal" style="display: block;">بوابة أولياء الأمور</a>
         </nav>
-        <div>
-            <a href="contact.html" class="cta-button">تواصل معنا</a>
-            <a href="portal.html" class="cta-button parent-portal">بوابة أولياء الأمور</a>
-        </div>
     </header>
 
     <main>
-        
         <section class="page-header">
             <div class="container">
                 <h2>🌐 حياة شاملة: بناء الشخصية وتنمية المهارات خارج الصفوف الدراسية</h2>
@@ -50,21 +48,13 @@
             <div class="container">
                 <h2>🎨 الأنشطة اللاصفية (CCAs)</h2>
                 <p style="text-align: center; margin-bottom: 40px;">نقدم برنامجاً إثرائياً يشجع الطلاب على اكتشاف مواهبهم.</p>
-                
                 <div class="activity-category">
                     <h3>🧠 أنشطة العقل والمهارات</h3>
-                    <div class="activity-list">
-                        <span class="activity-item">نادي الروبوتات والبرمجة</span>
-                        <span class="activity-item">نادي المناظرات والخطابة</span>
-                    </div>
+                    <div class="activity-list"><span class="activity-item">نادي الروبوتات والبرمجة</span><span class="activity-item">نادي المناظرات والخطابة</span></div>
                 </div>
-
                 <div class="activity-category">
                     <h3>🏅 أنشطة الرياضة واللياقة</h3>
-                    <div class="activity-list">
-                        <span class="activity-item">فريق كرة القدم</span>
-                        <span class="activity-item">السباحة وألعاب القوى</span>
-                    </div>
+                    <div class="activity-list"><span class="activity-item">فريق كرة القدم</span><span class="activity-item">السباحة وألعاب القوى</span></div>
                 </div>
             </div>
         </section>
@@ -73,23 +63,19 @@
             <div class="container" style="text-align: center;">
                 <h2>🤝 رعاية الطلاب والدعم الشامل</h2>
                 <div class="support-grid">
-                     <div class="facility-card" style="border-top: 5px solid var(--accent-color);">
-                        <i class="fas fa-hand-holding-heart"></i>
-                        <h4>خدمات الإرشاد النفسي</h4>
-                        <p>توفير دعم نفسي واجتماعي فردي.</p>
-                    </div>
-                     <div class="facility-card" style="border-top: 5px solid var(--accent-color);">
-                        <i class="fas fa-bus"></i>
-                        <h4>خدمة النقل الآمن</h4>
-                        <p>باصات مجهزة ومراقبة لضمان وصول الطلاب بأمان.</p>
-                    </div>
+                     <div class="facility-card" style="border-top: 5px solid var(--accent-color);"><i class="fas fa-hand-holding-heart"></i><h4>خدمات الإرشاد النفسي</h4><p>توفير دعم نفسي واجتماعي فردي.</p></div>
+                     <div class="facility-card" style="border-top: 5px solid var(--accent-color);"><i class="fas fa-bus"></i><h4>خدمة النقل الآمن</h4><p>باصات مجهزة ومراقبة لضمان وصول الطلاب بأمان.</p></div>
                 </div>
             </div>
         </section>
-
     </main>
     
     <footer></footer>
-
+    <script>
+        function toggleMenu() {
+            var navLinks = document.getElementById('navbarNav');
+            navLinks.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
