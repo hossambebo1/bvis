@@ -11,21 +11,19 @@
 
     <header class="navbar">
         <div class="logo"><h1>BVIS | Bright Vision International School</h1></div>
-        <nav class="nav-links">
+        <div class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+        <nav class="nav-links" id="navbarNav">
             <a href="index.html">الرئيسية</a>
             <a href="about.html">عن المدرسة</a>
             <a href="academics.html">الأكاديميات</a>
             <a href="admissions.html">القبول والتسجيل</a>
             <a href="campus.html">الحياة المدرسية</a>
+            <a href="contact.html" class="cta-button" style="display: block;">تواصل معنا</a>
+            <a href="portal.html" class="cta-button parent-portal" style="font-weight: bold; border-bottom: 2px solid white; display: block;">بوابة أولياء الأمور</a>
         </nav>
-        <div>
-            <a href="contact.html" class="cta-button">تواصل معنا</a>
-            <a href="portal.html" class="cta-button parent-portal" style="font-weight: bold; border-bottom: 2px solid white;">بوابة أولياء الأمور</a>
-        </div>
     </header>
 
     <main>
-        
         <section class="page-header">
             <div class="container">
                 <h2>🔒 بوابة أولياء الأمور: تواصل مباشر ومتابعة فورية</h2>
@@ -53,23 +51,21 @@
 
                 <div class="features-section">
                     <h2>ميزات البوابة الأساسية</h2>
-                    <div class="feature-item">
-                        <i class="fas fa-chart-line"></i><div><h4>التقارير والدرجات الأكاديمية</h4><p>متابعة فورية لنتائج الاختبارات وسجل الحضور والغياب.</p></div>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fas fa-calendar-alt"></i><div><h4>الجدول الدراسي والفعاليات</h4><p>الوصول لجدول الحصص اليومي، والتقويم المدرسي.</p></div>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fas fa-comments"></i><div><h4>التواصل المباشر مع المعلمين</h4><p>نظام مراسلة داخلي آمن لإرسال استفسارات خاصة.</p></div>
-                    </div>
+                    <div class="feature-item"><i class="fas fa-chart-line"></i><div><h4>التقارير والدرجات الأكاديمية</h4><p>متابعة فورية لنتائج الاختبارات وسجل الحضور والغياب.</p></div></div>
+                    <div class="feature-item"><i class="fas fa-calendar-alt"></i><div><h4>الجدول الدراسي والفعاليات</h4><p>الوصول لجدول الحصص اليومي، والتقويم المدرسي.</p></div></div>
+                    <div class="feature-item"><i class="fas fa-comments"></i><div><h4>التواصل المباشر مع المعلمين</h4><p>نظام مراسلة داخلي آمن لإرسال استفسارات خاصة.</p></div></div>
                 </div>
 
             </div>
         </section>
-
     </main>
     
     <footer></footer>
-
+    <script>
+        function toggleMenu() {
+            var navLinks = document.getElementById('navbarNav');
+            navLinks.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
