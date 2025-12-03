@@ -10,21 +10,19 @@
 <body>
     <header class="navbar">
         <div class="logo"><h1>BVIS | Bright Vision International School</h1></div>
-        <nav class="nav-links">
+        <div class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+        <nav class="nav-links" id="navbarNav">
             <a href="index.html">الرئيسية</a>
             <a href="about.html" style="font-weight: bold; border-bottom: 2px solid white;">عن المدرسة</a>
             <a href="academics.html">الأكاديميات</a>
             <a href="admissions.html">القبول والتسجيل</a>
             <a href="campus.html">الحياة المدرسية</a>
+            <a href="contact.html" class="cta-button" style="display: block;">تواصل معنا</a>
+            <a href="portal.html" class="cta-button parent-portal" style="display: block;">بوابة أولياء الأمور</a>
         </nav>
-        <div>
-            <a href="contact.html" class="cta-button">تواصل معنا</a>
-            <a href="portal.html" class="cta-button parent-portal">بوابة أولياء الأمور</a>
-        </div>
     </header>
 
     <main>
-        
         <section class="page-header">
             <div class="container">
                 <h2>نحن BVIS: إلهام العقول العالمية، وصياغة المستقبل المحلي</h2>
@@ -57,12 +55,7 @@
                 <h2>قيادة واعية: فريق إداري ذو خبرة دولية</h2>
                 <p style="text-align: center;">يتمتع فريقنا القيادي بخبرة واسعة في إدارة المناهج البريطانية والأمريكية.</p>
                 <div class="leadership-grid">
-                    <div class="person-card">
-                        <img src="placeholder-principal.jpg" alt="صورة المدير">
-                        <h4>السيد/ة [اسم المدير]</h4>
-                        <p><strong>المنصب:</strong> المدير/رئيس المدرسة</p>
-                        <p>خبرة تزيد عن 20 عاماً في التعليم الدولي وإدارة المناهج الأمريكية.</p>
-                    </div>
+                    <div class="person-card"><img src="placeholder-principal.jpg" alt="صورة المدير"><h4>السيد/ة [اسم المدير]</h4><p><strong>المنصب:</strong> المدير/رئيس المدرسة</p><p>خبرة تزيد عن 20 عاماً في التعليم الدولي وإدارة المناهج الأمريكية.</p></div>
                     </div>
             </div>
         </section>
@@ -76,10 +69,14 @@
                 </div>
             </div>
         </section>
-        
     </main>
     
     <footer></footer>
-    
+    <script>
+        function toggleMenu() {
+            var navLinks = document.getElementById('navbarNav');
+            navLinks.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
